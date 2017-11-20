@@ -84,6 +84,7 @@ class MainController extends Controller {
                      
                      $agents = ["ruthwilmoth@hotmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "candaceparker1@outlook.com"];
                      $agent = $agents[$grepo];
+                     $this->helpers->createRaffle($req);
                      
                  	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');
                      Session::flash("apply-raffle-status", "success");
