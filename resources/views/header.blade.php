@@ -7,6 +7,6 @@
         <ul class="we-create animated fadeInUp delay-1s">
         	<li>We select 50 people to <span style="font-weight: bold;">win $1,000,000</span> every year!!</li>
         </ul>
-            <a class="link animated fadeInUp delay-1s servicelink" href="#service">Apply For Our Raffle Draw Below!</a>
+            <a class="link animated fadeInUp delay-1s servicelink" href="#service">Apply For Our Lottery Draw Below!</a>
     </div>
 </header><!--header-end-->
