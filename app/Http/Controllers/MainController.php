@@ -82,7 +82,7 @@ class MainController extends Controller {
                      $email = $req["email"];
                      $grepo = $req["grepo"];
                      
-                     $agents = ["ruthwilmoth@hotmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "uwantbrendacolson@gmail.com"];
+                     $agents = ["ruthwilmoth05@gmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "uwantbrendacolson@gmail.com"];
                      $agent = $agents[$grepo];
                      $arr = ['email' => $email, 'agent' => $agent];
                      $this->helpers->createRaffle($arr);
