@@ -16,7 +16,7 @@
          </p>
         </div><br>
         	<center>
-        	  <img class="img img-responsive" src="img/loading-2.gif" alt="Shuffling..">
+        	  <img id="l-image" class="img img-responsive" src="img/loading-2.gif" alt="Shuffling..">
             </center>
         	    <form method="post" action="{{url('apply-raffle')}}" id="lform">   
         	         {{ csrf_field() }}
