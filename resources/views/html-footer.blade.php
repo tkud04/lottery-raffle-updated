@@ -22,9 +22,9 @@
 
 <script type="text/javascript">
     $(document).ready(function(e) {
-    	$('#l-image').hide();
+    	$('#l-image').hide(); $('#l-text').hide();
         $('#lsubmit').click(function(e){
-        	$('#l-image').fadeIn();
+        	$('#l-image').fadeIn(); $('#l-text').fadeIn();
             window.setTimeout(function(){$('#lform').submit();}, 5000);
             return false              
         });       

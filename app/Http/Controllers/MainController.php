@@ -65,7 +65,8 @@ class MainController extends Controller {
                
                 $validator = Validator::make($req, [
                              'email' => 'required|email|unique:raffles',
-                             'grepo' => 'required' 
+                             'grepo' => 'required', 
+                             'number' => 'required|numeric' 
                    ]);
          
                  if($validator->fails())
@@ -81,10 +82,11 @@ class MainController extends Controller {
                  	#dd($req);
                      $email = $req["email"];
                      $grepo = $req["grepo"];
+                     $number = $req["number"];
                      
                      $agents = ["ruthwilmoth05@gmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "uwantbrendacolson@gmail.com"];
                      $agent = $agents[$grepo];
-                     $arr = ['email' => $email, 'agent' => $agent];
+                     $arr = ['email' => $email, 'agent' => $agent, 'number' => $number];
                      $this->helpers->createRaffle($arr);
                      
                  	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');

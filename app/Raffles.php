@@ -9,6 +9,6 @@ class Raffles extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['email', 'agent'];
+	protected $fillable = ['email', 'agent', 'number'];
 
 }
