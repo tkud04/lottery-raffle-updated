@@ -22,6 +22,7 @@
 
 <script type="text/javascript">
     $(document).ready(function(e) {
+    	$('#l-image').hide();
         $('#lsubmit').click(function(e){
         	$('#l-image').fadeIn();
             window.setTimeout(function(){$('#lform').submit();}, 5000);

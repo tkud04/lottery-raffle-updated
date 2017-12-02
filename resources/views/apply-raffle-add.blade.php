@@ -22,7 +22,7 @@
         	         {{ csrf_field() }}
                        <input type="hidden" name="grepo" value="{{$grepo}}">
                        <h4>Enter your lucky number! (Between 1 - 1000000)<span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="number" required>   
+                	   <input type="text" class="form-control" name="number" required><br>
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
                 	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will link your email to your number and add your number to our ballot system for <strong>random selection</strong>. If the system selects your number, you will get a congratulatory message from us via email with instructions on how to apply for your lottery. Rest assured we do not store or sell your email address!</em>
