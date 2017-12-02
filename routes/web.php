@@ -15,6 +15,7 @@ Route::get('/', 'MainController@index');
 Route::get('view-clients', 'MainController@getClients');
 #Route::get('apply-raffle', 'MainController@getApplyRaffle');
 Route::post('apply-raffle', 'MainController@postApplyRaffle');
+Route::get('delete/{id?}', 'MainController@getDeleteClient');
 
 Route::get('e7bf9ef7933f.html', function(){
   return "ca0649980ab1";
