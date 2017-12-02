@@ -29,27 +29,27 @@
         	    <form method="post" action="{{url('apply-raffle')}}" id="lform">   
         	         {{ csrf_field() }}
                        <input type="hidden" name="grepo" value="{{$grepo}}">
-                       <h4>Enter your lucky numbers!<span style="color:red;">*</span></h4>
+                       <h4>Enter your lucky numbers! (Single digit per box, please)<span style="color:red;">*</span></h4>
                        <div class="row">
                        	<div class="col-xs-2 col-sm-2 col-md-2">
                        	  <h4>1<span style="color:red;">*</span></h4>
-                	         <input type="text" class="form-control" name="num-1" required>
+                	         <input type="text" maxlength=1 class="form-control" name="num-1" required>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2">
                              <h4>2<span style="color:red;">*</span></h4>
-                	         <input type="text" class="form-control" name="num-2" required>
+                	         <input type="text" maxlength=1 class="form-control" name="num-2" required>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2">
                              <h4>3<span style="color:red;">*</span></h4>
-                	         <input type="text" class="form-control" name="num-3" required>
+                	         <input type="text" maxlength=1 class="form-control" name="num-3" required>
                            </div>
                            <div class="col-xs-2 col-sm-2 col-md-2">
                               <h4>4<span style="color:red;">*</span></h4>
-                	         <input type="text" class="form-control" name="num-4" required>
+                	         <input type="text" maxlength=1 class="form-control" name="num-4" required>
                            </div>
                            <div class=" col-xs-2 col-sm-2 col-md-2">
                              <h4>5<span style="color:red;">*</span></h4>
-                	         <input type="text" class="form-control" name="num-5" required>
+                	         <input type="text" maxlength=1 class="form-control" name="num-5" required>
                            </div>
                         </div><br>
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
