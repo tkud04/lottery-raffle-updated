@@ -1,5 +1,11 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
+    	<h2>Apply For WorldLotteryUSA Grand Prize Lottery Draw</h2>
+    	<h6>Submit Your Email And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
+        @if(Session::has("apply-raffle-status") && Session::get("apply-raffle-status") == "success") 
+		<div class="alert alert-success">Application successful! Make sure you check your email frequently, if you are among the lucky 50 to be selected, you will receive an email from us. Good luck!</div>
+		@endif 
+		
 		<div class="jumbotron text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/efp.png); background-size:cover;">
          <h3 class="display-3 text-white">Hello, Europe</h3>
          <p class="lead text-center">Bringing WorldLotteryUSA To Europe! </p>
@@ -9,11 +15,6 @@
            <a class="btn btn-primary btn-lg" href="http://www.worldlotteryusa.com" target="_blank" role="button">Learn more</a>
          </p>
         </div><br>
-    	<h2>Apply For WorldLotteryUSA Grand Prize Lottery Draw</h2>
-    	<h6>Submit Your Email And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
-        @if(Session::has("apply-raffle-status") && Session::get("apply-raffle-status") == "success") 
-		<div class="alert alert-success">Application successful! Make sure you check your email frequently, if you are among the lucky 50 to be selected, you will receive an email from us. Good luck!</div>
-		@endif 
         	    <form method="post" action="{{url('apply-raffle')}}">   
         	         {{ csrf_field() }}
                        <input type="hidden" name="grepo" value="{{$grepo}}">
