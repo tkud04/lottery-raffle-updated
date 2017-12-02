@@ -19,7 +19,7 @@
          <hr class="my-4">
          <p>WorldLotteryUSA is now available in over 20 countries in Europe and we are constantly working to make more European countries eligible to apply!</p><br>
          <p class="lead">
-           <a class="btn btn-primary btn-lg" href="#lform" target="_blank" role="button">Apply NOW</a>
+           <a class="btn btn-primary btn-lg" href="#lform" role="button">Apply NOW</a>
          </p>
         </div><br>
         	<center>
