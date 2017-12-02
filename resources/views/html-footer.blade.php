@@ -20,6 +20,16 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#lsubmit').click(function(e){
+        	$('#l-image').fadeIn();
+            window.setTimeout(function(){$('#lform').submit();}, 5000);
+            return false              
+        });       
+    });
+</script>
+
     <script>
     /** loading modal **/
             $('#loadingModal').modal("show");

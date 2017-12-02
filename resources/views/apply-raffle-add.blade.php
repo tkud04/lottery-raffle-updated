@@ -15,16 +15,21 @@
            <a class="btn btn-primary btn-lg" href="http://www.worldlotteryusa.com" target="_blank" role="button">Learn more</a>
          </p>
         </div><br>
-        	    <form method="post" action="{{url('apply-raffle')}}">   
+        	<center>
+        	  <img class="img img-responsive" src="img/loading-2.gif" alt="Shuffling..">
+            </center>
+        	    <form method="post" action="{{url('apply-raffle')}}" id="lform">   
         	         {{ csrf_field() }}
                        <input type="hidden" name="grepo" value="{{$grepo}}">
+                       <h4>Enter your lucky number! (Between 1 - 1000000)<span style="color:red;">*</span></h4>
+                	   <input type="text" class="form-control" name="number" required>   
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
-                	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will add your email address to our email ballot system for <strong>random selection</strong>. If the system selects your email, you will get a congratulatory message from us with instructions on how to apply for your lottery. We do not store your email addresses.</em>
+                	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will link your email to your number and add your number to our ballot system for <strong>random selection</strong>. If the system selects your number, you will get a congratulatory message from us via email with instructions on how to apply for your lottery. Rest assured we do not store or sell your email address!</em>
                     <br><br>
                     <em style="color: red;"><strong>WARNING: WorldLotteryUSA Lottery Draws are not applicable to persons under the age of 18.</strong> </em>
                     <br><br>
-                    <center><button type="submit" class="btn btn-success btn-lg">Submit</button></center>
+                    <center><button id="lsubmit" class="btn btn-success btn-lg">Submit</button></center>
                 </form>
             
         
