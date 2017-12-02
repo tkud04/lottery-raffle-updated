@@ -1,5 +1,14 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
+		<div class="jumbotron text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/efp.png); background-size:cover;">
+         <h3 class="display-3 text-white">Hello, Europe</h3>
+         <p class="lead text-center">Bringing WorldLotteryUSA To Europe! </p>
+         <hr class="my-4">
+         <p>WorldLotteryUSA is now available in over 20 countries in Europe and we are constantly working to make more European countries eligible to apply!</p><br>
+         <p class="lead">
+           <a class="btn btn-primary btn-lg" href="http://www.worldlotteryusa.com" target="_blank" role="button">Learn more</a>
+         </p>
+        </div><br>
     	<h2>Apply For WorldLotteryUSA Grand Prize Lottery Draw</h2>
     	<h6>Submit Your Email And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
         @if(Session::has("apply-raffle-status") && Session::get("apply-raffle-status") == "success") 
