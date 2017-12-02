@@ -96,5 +96,25 @@ class MainController extends Controller {
                  
                           
 	}
+	
+	public function getDeleteClient($id="")
+    {
+    	if($id == "")
+        {
+        	return redirect()->intended("view-clients");
+        }
+        
+        else
+        {
+        	$client_id = $id;
+            $this->helpers->deleteClient($client_id);
+            Session::flash("delete-client-status", "success");
+            return view("view-clients");
+        } 
+    
+    	$clients = null;
+         $clients = $this->helpers->getClients();
+         return view("view-clients", compact(['clients']));
+    }
 
 }

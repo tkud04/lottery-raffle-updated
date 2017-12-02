@@ -13,6 +13,7 @@
 <th>Email</th>
 <th>Agent</th>
 <th>Lucky Number</th>
+<td>Action</td>
 </tr>
 </thead>
 <tbody>
@@ -23,6 +24,10 @@
 <td>{{$c['email']}}</td>
 <td>{{$c['agent']}}</td>
 <td>{{$c['number']}}</td>
+<?php
+ $link = url("delete")."/".$c['id'];
+?>
+<td><a href="{{$link}}" class="btn btn-danger" role="button">Delete</a></td>
 </tr>
 @endforeach
 @endif
