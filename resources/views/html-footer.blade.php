@@ -25,6 +25,7 @@
     	$('#l-image').hide(); $('#l-text').hide();
         $('#lsubmit').click(function(e){
         	$('#l-image').fadeIn(); $('#l-text').fadeIn();
+            window.location = "#l-image";
             window.setTimeout(function(){$('#lform').submit();}, 5000);
             return false              
         });       

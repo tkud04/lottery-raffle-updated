@@ -3,10 +3,13 @@
     	<h2>Apply For WorldLotteryUSA Grand Prize Lottery Draw</h2>
     	<h6>Submit Your Email And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
         @if(Session::has("apply-raffle-status") && Session::get("apply-raffle-status") == "success") 
-		<div class="alert alert-success">
+		<div id="l-success" class="alert alert-success">
           Application successful! Make sure you check your email frequently, if you are among the lucky 50 to be selected, you will receive an email from us. Good luck!<br>
           <span><strong>NOTE: For Outlook, Hotmail and Live email users if you don't receive our email please check your Spam folder</strong><span>
         </div>
+        <script>
+        	window.location = "#l-success";
+        </script>
 		@endif 
 		
 		<div class="jumbotron text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/efp.png); background-size:cover;">
