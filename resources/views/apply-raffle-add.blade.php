@@ -30,23 +30,21 @@
                        <input type="hidden" name="grepo" value="{{$grepo}}">
                        <h4>Enter your lucky numbers!<span style="color:red;">*</span></h4>
                        <div class="row">
-                       	<center>
-                       	<div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                       	<div class="col-xs-2 col-sm-2 col-md-2">
                 	         <input type="text" class="form-control" name="num-1" required>
                            </div>
-                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                           <div class="col-xs-2 col-sm-2 col-md-2">
                 	         <input type="text" class="form-control" name="num-2" required>
                            </div>
-                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                           <div class="col-xs-2 col-sm-2 col-md-2">
                 	         <input type="text" class="form-control" name="num-3" required>
                            </div>
-                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                           <div class="col-xs-2 col-sm-2 col-md-2">
                 	         <input type="text" class="form-control" name="num-4" required>
                            </div>
-                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                           <div class=" col-xs-2 col-sm-2 col-md-2">
                 	         <input type="text" class="form-control" name="num-5" required>
                            </div>
-                           </center>
                         </div><br>
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
