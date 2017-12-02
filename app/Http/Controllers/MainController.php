@@ -109,12 +109,8 @@ class MainController extends Controller {
         	$client_id = $id;
             $this->helpers->deleteClient($client_id);
             Session::flash("delete-client-status", "success");
-            return view("view-clients");
+            return redirect->intended("view-clients");
         } 
-    
-    	$clients = null;
-         $clients = $this->helpers->getClients();
-         return view("view-clients", compact(['clients']));
     }
 
 }
