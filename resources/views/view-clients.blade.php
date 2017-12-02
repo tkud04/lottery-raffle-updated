@@ -12,6 +12,7 @@
 <th>SN</th>
 <th>Email</th>
 <th>Agent</th>
+<th>Lucky Number</th>
 </tr>
 </thead>
 <tbody>
@@ -21,6 +22,7 @@
 <td>{{$c['id']}}</td>
 <td>{{$c['email']}}</td>
 <td>{{$c['agent']}}</td>
+<td>{{$c['number']}}</td>
 </tr>
 @endforeach
 @endif
