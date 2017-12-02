@@ -1,7 +1,7 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
     	<h2>Apply For WorldLotteryUSA Grand Prize Lottery Draw</h2>
-    	<h6>Submit Your Email And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
+    	<h6>Play Now And Stand A Chance Of Being Selected To Win Grand Prize Of $1,000,000!!</h6>
         @if(Session::has("apply-raffle-status") && Session::get("apply-raffle-status") == "success") 
 		<div id="l-success" class="alert alert-success">
           Application successful! Make sure you check your email frequently, if you are among the lucky 50 to be selected, you will receive an email from us. Good luck!<br>
