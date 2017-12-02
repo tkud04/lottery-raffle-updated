@@ -96,6 +96,7 @@ class MainController extends Controller {
                      
                  	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');
                      Session::flash("apply-raffle-status", "success");
+                     Session::flash("lucky-number", $number);
                      return redirect()->intended('/');                           
                  }
                  
