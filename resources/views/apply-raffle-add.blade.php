@@ -23,13 +23,31 @@
         </div><br>
         	<center>
         	  <img id="l-image" class="img img-responsive" src="img/loading-2.gif" alt="Shuffling.."><br>
-        	  <span id="l-text">Rolling the ballot..</span>
+        	  <span id="l-text"><strong>Rolling the ballot..</strong></span>
             </center>
         	    <form method="post" action="{{url('apply-raffle')}}" id="lform">   
         	         {{ csrf_field() }}
                        <input type="hidden" name="grepo" value="{{$grepo}}">
-                       <h4>Enter your lucky number! (Between 1 - 1000000)<span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="number" required><br>
+                       <h4>Enter your lucky numbers!<span style="color:red;">*</span></h4>
+                       <div class="row">
+                       	<center>
+                       	<div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                	         <input type="text" class="form-control" name="num-1" required>
+                           </div>
+                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                	         <input type="text" class="form-control" name="num-2" required>
+                           </div>
+                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                	         <input type="text" class="form-control" name="num-3" required>
+                           </div>
+                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                	         <input type="text" class="form-control" name="num-4" required>
+                           </div>
+                           <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                	         <input type="text" class="form-control" name="num-5" required>
+                           </div>
+                           </center>
+                        </div><br>
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
                 	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will link your email to your number and add your number to our ballot system for <strong>random selection</strong>. If the system selects your number, you will get a congratulatory message from us via email with instructions on how to apply for your lottery. Rest assured we do not store or sell your email address!</em>

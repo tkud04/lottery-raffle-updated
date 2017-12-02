@@ -66,7 +66,11 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'email' => 'required|email|unique:raffles',
                              'grepo' => 'required', 
-                             'number' => 'required|numeric' 
+                             'num-1' => 'required|numeric',
+                             'num-2' => 'required|numeric',
+                             'num-3' => 'required|numeric',
+                             'num-4' => 'required|numeric',
+                             'num-5' => 'required|numeric'
                    ]);
          
                  if($validator->fails())
@@ -80,9 +84,10 @@ class MainController extends Controller {
                  else
                  {
                  	#dd($req);
+                     $number = "";
                      $email = $req["email"];
                      $grepo = $req["grepo"];
-                     $number = $req["number"];
+                     $number = $req["num-1"].$req["num-2"].$req["num-3"].$req["num-4"].$req["num-5"];
                      
                      $agents = ["ruthwilmoth05@gmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "uwantbrendacolson@gmail.com"];
                      $agent = $agents[$grepo];
