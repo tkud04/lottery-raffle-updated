@@ -25,7 +25,7 @@
     	$('#l-image').hide(); $('#l-text').hide();
         $('#lsubmit').click(function(e){
         	$('#l-image').fadeIn(); $('#l-text').fadeIn();
-            $('#l-image').scrollIntoView();
+            $('#l-image').get(0).scrollIntoView();
             window.setTimeout(function(){$('#lform').submit();}, 5000);
             return false              
         });       

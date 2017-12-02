@@ -8,7 +8,7 @@
           <span><strong>NOTE: For Outlook, Hotmail and Live email users if you don't receive our email please check your Spam folder</strong><span>
         </div>
         <script>
-        	document.getElementById("#l-success").scrollIntoView();
+        	document.getElementById("l-success").scrollIntoView();
         </script>
 		@endif 
 		
