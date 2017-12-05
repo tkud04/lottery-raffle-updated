@@ -1,6 +1,6 @@
 @extends('layout') 
 
-@section('title', "Submit Your Email For Our Lottery Draw!")
+@section('title', "Pick 5 Lucky Numbers And Win $1,000,000 Grand Prize!")
 
 @section('header')
 @include("header")
