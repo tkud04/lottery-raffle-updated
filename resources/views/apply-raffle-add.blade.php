@@ -54,7 +54,7 @@
                         </div><br>
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
-                	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will link your email to your number and add your number to our ballot system for <strong>random selection</strong>. If the system selects your number, you will get a congratulatory message from us via email with instructions on how to apply for your lottery. Rest assured we do not store or sell your email address!</em>
+                	<em style="color: red;"><strong>Note:</strong> Clicking Submit below will add your lucky numbers to our database and the ballot system will run <strong>random selection</strong>. If the numbers selected by the system matches your lucky numbers, you will get a congratulatory message from us via email with instructions on how to apply for your lottery. Rest assured we do not store or sell your email address!</em>
                     <br><br>
                     <em style="color: red;"><strong>WARNING: WorldLotteryUSA Lottery Draws are not applicable to persons under the age of 18.</strong> </em>
                     <br><br>
