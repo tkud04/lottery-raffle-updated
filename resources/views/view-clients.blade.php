@@ -24,8 +24,8 @@
 <td>{{$c['id']}}</td>
 <td>{{$c['email']}}</td>
 <td>{{$c['agent']}}</td>
-<td>{{$c['date']}}</td>
 <td>{{$c['number']}}</td>
+<td>{{$c['date']}}</td>
 <?php
  $link = url("delete")."/".$c['id'];
 ?>
