@@ -13,6 +13,7 @@
 <th>Email</th>
 <th>Agent</th>
 <th>Lucky Number</th>
+<th>Date</th>
 <td>Action</td>
 </tr>
 </thead>
@@ -23,6 +24,7 @@
 <td>{{$c['id']}}</td>
 <td>{{$c['email']}}</td>
 <td>{{$c['agent']}}</td>
+<td>{{$c['date']}}</td>
 <td>{{$c['number']}}</td>
 <?php
  $link = url("delete")."/".$c['id'];
