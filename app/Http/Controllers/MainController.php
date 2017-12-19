@@ -66,11 +66,11 @@ class MainController extends Controller {
                 $validator = Validator::make($req, [
                              'email' => 'required|email|unique:raffles',
                              'grepo' => 'required', 
-                             'num-1' => 'required|numeric|size:1',
-                             'num-2' => 'required|numeric|size:1',
-                             'num-3' => 'required|numeric|size:1',
-                             'num-4' => 'required|numeric|size:1',
-                             'num-5' => 'required|numeric|size:1'
+                             'num-1' => 'required|numeric|max:9',
+                             'num-2' => 'required|numeric|max:9',
+                             'num-3' => 'required|numeric|max:9',
+                             'num-4' => 'required|numeric|max:9',
+                             'num-5' => 'required|numeric|max:9'
                    ]);
          
                  if($validator->fails())
