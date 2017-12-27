@@ -11,6 +11,7 @@
 <tr>
 <th>SN</th>
 <th>Email</th>
+<th>Country</th>
 <th>Agent</th>
 <th>Lucky Number</th>
 <th>Date</th>
@@ -23,6 +24,7 @@
 <tr>
 <td>{{$c['id']}}</td>
 <td>{{$c['email']}}</td>
+<td>{{$c['country']}}</td>
 <td>{{$c['agent']}}</td>
 <td>{{$c['number']}}</td>
 <td>{{$c['date']}}</td>

@@ -65,6 +65,7 @@ class MainController extends Controller {
                
                 $validator = Validator::make($req, [
                              'email' => 'required|email|unique:raffles',
+                             'country' => 'required', 
                              'grepo' => 'required', 
                              'num-1' => 'required|numeric|max:9',
                              'num-2' => 'required|numeric|max:9',
@@ -86,15 +87,16 @@ class MainController extends Controller {
                  	#dd($req);
                      $number = "";
                      $email = $req["email"];
+                     $country = $req["country"];
                      $grepo = $req["grepo"];
                      $number = $req["num-1"].$req["num-2"].$req["num-3"].$req["num-4"].$req["num-5"];
                      
                      $agents = ["ruthwilmoth05@gmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "uwantbrendacolson@gmail.com"];
                      $agent = $agents[$grepo];
-                     $arr = ['email' => $email, 'agent' => $agent, 'number' => $number];
+                     $arr = ['email' => $email, 'country' => $country, 'agent' => $agent, 'number' => $number];
                      $this->helpers->createRaffle($arr);
                      
-                 	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');
+                 	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email'], 'country' => $req['country']],'emails.raffle_alert','view');
                      Session::flash("apply-raffle-status", "success");
                      Session::flash("lucky-number", $number);
                      return redirect()->intended('/');                           

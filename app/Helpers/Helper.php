@@ -53,7 +53,8 @@ class Helper implements HelperContract
            function createRaffle($data)
            {
            	$ret = Raffles::create(['email' => $data['email'], 
-                                                      'agent' => $data['agent'], 
+                                                      'country' => $data['country'], 
+                                                       'agent' => $data['agent'], 
                                                       'number' => $data['number']
                                                       ]);
                                                       
@@ -71,6 +72,7 @@ class Helper implements HelperContract
               	$temp = [];
               	$temp['id'] = $c->id;
                   $temp['email'] = $c->email;
+                  $temp['country'] = $c->country;
                   $temp['agent'] = $c->agent;
                   $temp['number'] = $c->number;
                   $temp["date"] = $c->created_at->format("D, jS F Y");
