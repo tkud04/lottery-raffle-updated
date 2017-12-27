@@ -42,7 +42,7 @@
   
   <div class="row">
     <div class="col-md-12">
-    	{!! $clients->links() !!}
+    	{!! $clients->links('pagination') !!}
     </div>
   </div>
   
