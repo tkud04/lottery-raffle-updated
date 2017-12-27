@@ -42,7 +42,7 @@ class MainController extends Controller {
     {
     	$clients = null;
          $clients = $this->helpers->paginate($this->helpers->getClients());
-         dd($clients);
+         #dd($clients);
          $clients->setPath('view-clients');
          return view("view-clients", compact(['clients']));
     }
