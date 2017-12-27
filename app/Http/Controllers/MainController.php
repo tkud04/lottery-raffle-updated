@@ -41,10 +41,13 @@ class MainController extends Controller {
     public function getClients()
     {
     	$clients = null;
-         $clients = $this->helpers->paginate($this->helpers->getClients());
+        $c = count($this->helpers->getClients());
+        $perPage = 15;
+        $totalPages = ($c%$perPage) + 1;
+         $clients = $this->helpers->paginate($c);
          #dd($clients);
          $clients->setPath('view-clients');
-         return view("view-clients", compact(['clients']));
+         return view("view-clients", compact(['clients','totalPages']));
     }
     
     public function getApplyRaffle(Request $request)

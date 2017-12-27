@@ -14,28 +14,19 @@
       </a>
     </li>
       {{-- Pagination Elements --}}
-        @foreach ($i =0; $i < $paginator->count(); $i++)
           <?php 
-            {{-- "Three Dots" Separator --}}
-            @if (is_string($element))
-                <li class="page-item disabled"><span>{{ $element }}</span></li>
-            @endif
-            {{-- Array Of Links --}}
-            @if (is_array($element))
-                @foreach ($element as $e)
-                      	<?php
-                           #Current page
-                           $count = 0;
-                           $currentClass = "";
+                           for($i = 1; $i <= $totalPages; $i++):
+                            $currentClass = "";
                            $p = $paginator->currentPage();
-                           if($page == $p) $currentClass = "page-item active";
+                           if($p == $i) $currentClass = "page-item active";
                           else $currentClass = "page-item";
+                          
+                          $url = $paginator->url($i); 
                          ?>
-                   <li class="{{$currentClass}}"><span>{{ $p }}</span></li>
-                @endforeach
-            @endif
-        @endforeach
+                   <li class="{{$currentClass}}"><a class="page-link" href="{{$url}}">{{$i}}</a></li>
+
       	<?php
+           endfor;
           #Previous Page Link
           $nextClass = "";
           if($paginator->hasMorePages()) $nextClass = "page-item disabled";
