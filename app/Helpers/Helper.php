@@ -65,7 +65,7 @@ class Helper implements HelperContract
           function getClients()
           {
           	$ret = [];
-          	$clients = Raffles::all();
+          	$clients = Raffles::orderBy('created_at', 'desc')->get();
           	 if($clients != null)
               {
               	foreach($clients as $c){
