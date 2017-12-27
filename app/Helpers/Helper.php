@@ -7,7 +7,7 @@ use Carbon\Carbon;
 use Mail;
 use Auth; 
 use App\Raffles;
-use Illuminate\Pagination\LenghtAwarePaginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Helper implements HelperContract
 {
@@ -102,7 +102,7 @@ class Helper implements HelperContract
      * @param  int  $perPage
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
-          function paginate($items, $perPage=15)
+          function paginate($items, perPage=15)
           {
           	$ret = null;
           
