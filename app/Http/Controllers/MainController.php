@@ -41,7 +41,7 @@ class MainController extends Controller {
     public function getClients()
     {
     	$clients = null;
-         $clients = $this->helpers->getClients();
+         $clients = $this->helpers->paginate($this->helpers->getClients());
          return view("view-clients", compact(['clients']));
     }
     
