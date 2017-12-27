@@ -7,5 +7,6 @@ Interface HelperContract
         public function createRaffle($data);
         public function getClients();
         public function deleteClient($id);
+        public function paginate($items, $perPage);
 }
  ?>

@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Mail;
 use Auth; 
 use App\Raffles;
+use Illuminate\Pagination\LenghtAwarePaginator;
 
 class Helper implements HelperContract
 {
@@ -93,6 +94,30 @@ class Helper implements HelperContract
                } 
                                                       
            } 
+           
+           /**
+     * Create a length aware custom paginator instance.
+     *
+     * @param  Array  $items
+     * @param  int  $perPage
+     * @return \Illuminate\Pagination\LengthAwarePaginator
+     */
+          function paginate($items, $perPage=15)
+          {
+          	$ret = null;
+          
+          	//Get current page form url e.g. &page=1
+             $currentPage = LengthAwarePaginator::resolveCurrentPage();
+             
+             //Slice the collection to get the items to display in current page
+            $currentPageItems = array_slice($items, ($currentPage - 1) * $perPage, $perPage);
+
+            //Create our paginator and pass it to the view
+            $ret = new LengthAwarePaginator($currentPageItems, count($items), $perPage);
+
+            return $ret;
+          }
+   
    
 }
 ?>
