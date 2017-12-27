@@ -102,7 +102,7 @@ class Helper implements HelperContract
      * @param  int  $perPage
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
-          function paginate($items, perPage=15)
+          function paginate($items, $perPage=15)
           {
           	$ret = null;
           
