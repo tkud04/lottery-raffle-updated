@@ -41,10 +41,11 @@ class MainController extends Controller {
     public function getClients()
     {
     	$clients = null;
-        $c = count($this->helpers->getClients());
+        $rawClients = $this->helpers->getClients();
+        $c = count($rawClients);
         $perPage = 15;
         $totalPages = ($c%$perPage) + 1;
-         $clients = $this->helpers->paginate($c);
+         $clients = $this->helpers->paginate($rawClients);
          #dd($clients);
          $clients->setPath('view-clients');
          return view("view-clients", compact(['clients','totalPages']));
