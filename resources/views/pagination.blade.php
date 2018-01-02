@@ -15,7 +15,7 @@
     </li>
       {{-- Pagination Elements --}}
           <?php 
-                           for($i = 1; $i <= $totalPages; $i++):
+                           for($i = 1; $i < $totalPages; $i++):
                             $currentClass = "";
                            $p = $paginator->currentPage();
                            if($p == $i) $currentClass = "page-item active";

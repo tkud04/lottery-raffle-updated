@@ -76,7 +76,7 @@ class Helper implements HelperContract
                   $temp['country'] = $c->country;
                   $temp['agent'] = $c->agent;
                   $temp['number'] = $c->number;
-                  $temp["date"] = $c->created_at->format("D, jS F Y");
+                  $temp["date"] = $c->created_at->format("D, jS F Y h:i A");
                   array_push($ret, $temp);
                  } 
               }
